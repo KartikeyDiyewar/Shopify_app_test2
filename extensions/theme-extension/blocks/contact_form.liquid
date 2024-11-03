@@ -1,0 +1,27 @@
+<div class="app-form">
+    <h1>{{ block.settings.form_title }}</h1>
+    <form class="form-inner"> 
+        <input type="text" name="name" placeholder="Name">
+        <input type="email" name="email" placeholder="Email">
+        <textarea name="message" placeholder="Message"></textarea>
+        <button class="appButton" type="submit">Send</button>
+    </form>
+</div>
+
+{% schema %}
+    {
+        "name": "Contact Form",
+        "target": "section",
+        "class": "app-dashboard-form",
+        "stylesheet": "app-form.css",
+        "javascript": "app-form.js",
+        "settings":[
+            {
+                "type": "text",
+                "id": "form_title",
+                "label": "Heading",
+                "default": "Contact US"
+              }
+        ]
+    }
+{% endschema %}
